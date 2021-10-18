@@ -4,6 +4,6 @@ COPY apache.sh /root
 COPY homedecor.html /root
 RUN chmod 755 /root/homedecor.html
 RUN chmod 755 /root/apache.sh
-RUN mv -f /root/homedecor.html /var/www/html/
+RUN mv -f /root/homedecor.html /usr/local/apache2/htdocs/
 CMD /root/apache.sh
 ENTRYPOINT service httpd start && /bin/bash
